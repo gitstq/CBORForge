@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cborforge"
+version = "1.0.0"
+description = "零依赖·离线优先的 CBOR (RFC 8949) 编解码、诊断表示法与规范性审计工具箱"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "CBORForge Contributors" }]
+keywords = [
+    "cbor",
+    "rfc8949",
+    "rfc7049",
+    "ctap2",
+    "webauthn",
+    "canonical",
+    "deterministic",
+    "diagnostic-notation",
+    "zero-dependency",
+    "offline-first",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+    "Typing :: Typed",
+]
+# 零依赖：运行期不引入任何第三方包
+dependencies = []
+
+[project.optional-dependencies]
+dev = []
+
+[project.scripts]
+cborforge = "cborforge.cli:main"
+
+[tool.setuptools]
+packages = ["cborforge"]
+
+[tool.setuptools.package-data]
+cborforge = ["py.typed"]

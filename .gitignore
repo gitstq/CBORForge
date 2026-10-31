@@ -1,0 +1,38 @@
+# Byte-compiled / 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 分发 / 构建产物
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+wheels/
+pip-wheel-metadata/
+
+# 虚拟环境
+.venv/
+venv/
+env/
+ENV/
+
+# 测试与覆盖率
+.tox/
+.nox/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# 编辑器与系统
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# 本地输出（不要提交示例生成的 CBOR）
+*.cbor
+!examples/*.cbor
